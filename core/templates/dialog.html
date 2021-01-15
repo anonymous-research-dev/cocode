@@ -1,0 +1,19 @@
+{% load static %}
+{% load i18n %}
+{% load jsonify %}
+<div id="dialog">
+    <dialog-modal ref="modal"></dialog-modal>
+</div>
+<script>
+    new Vue({
+        el: '#dialog',
+        created: function() {
+            window.showDialog = this.showDialog
+        },
+        methods: {
+            showDialog: function(body, params) {
+                return this.$refs.modal.show(body, params)
+            },
+        },
+    });
+</script>

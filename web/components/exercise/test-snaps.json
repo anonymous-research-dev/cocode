@@ -1,0 +1,515 @@
+[
+    [
+        1580994936491,
+        "TEST",
+        {
+            "type": "edit",
+            "filename": "main.py",
+            "value": "create_world()\nbot = Robot()\n\n# \"bot\"이 움직이는 경로를 파란색 선으로 표시합니다.\nbot.set_trace('blue')\n\nprint('print test 1')\nprint('print test 2')\nprint('print test 3')\n\n# \"bot\"을 왼쪽으로 돌리고, 앞으로 두 칸 움직이고,\n# 왼쪽으로 세 번 돌리고, 앞으로 세 칸 움직입니다.\nwhile bot.front_is_clear():\n    bot.move()\nbot.turn_left()\nwhile bot.front_is_clear():\n    bot.move()\n",
+            "line": 11,
+            "ch": 0,
+            "ts": 1580994936491
+        }
+    ],
+    [
+        1580994937491,
+        "TEST",
+        {
+            "type": "edit",
+            "filename": "main.py",
+            "value": "create_world()\nbot = Robot()\n\n# \"bot\"이 움직이는 경로를 파란색 선으로 표시합니다.\nbot.set_trace('blue')\n\nprint('print test 1')\nprint('print test 2')\nprint('print test 3')\n\n# \"bot\"을 왼쪽으로 돌리고, 앞으로 두 칸 움직이고,\n# 왼쪽으로 세 번 돌리고, 앞으로 세 칸 움직입니다.\nwhile bot.front_is_clear():\n    bot.move()\nbot.turn_left()\nwhile bot.front_is_clear():\n    bot.move()\n",
+            "line": 10,
+            "ch": 21,
+            "ts": 1580994937491
+        }
+    ],
+    [
+        1580994940563,
+        "TEST",
+        {
+            "type": "edit",
+            "filename": "main.py",
+            "value": "create_world()\nbot = Robot()\n\n# \"bot\"이 움직이는 경로를 파란색 선으로 표시합니다.\nbot.set_trace('blue')\n\nprint('print test 1')\nprint('print test 2')\nprint('print test 3')\n\n# \"bot\"을 왼쪽으로 돌리고, 앞으로 두 칸 움직이고,\n# 왼쪽으로 세 번 돌리고, 앞으로 세 칸 움직입니다.\nwhile bot.front_is_clear():\n    bot.move()\nbot.turn_left()\nwhile bot.front_is_clear():\n    bot.move()\n",
+            "line": 10,
+            "ch": 0,
+            "ts": 1580994940563
+        }
+    ],
+    [
+        1580994941564,
+        "TEST",
+        {
+            "type": "edit",
+            "filename": "main.py",
+            "value": "create_world()\nbot = Robot()\n\n# \"bot\"이 움직이는 경로를 파란색 선으로 표시합니다.\nbot.set_trace('blue')\n\nprint('print test 1')\nprint('print test 2')\n# print('print test 3')\n\n# \"bot\"을 왼쪽으로 돌리고, 앞으로 두 칸 움직이고,\n# 왼쪽으로 세 번 돌리고, 앞으로 세 칸 움직입니다.\nwhile bot.front_is_clear():\n    bot.move()\nbot.turn_left()\nwhile bot.front_is_clear():\n    bot.move()\n",
+            "line": 10,
+            "ch": 2,
+            "ts": 1580994941564
+        }
+    ],
+    [
+        1580994943195,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-init",
+            "ts": 1580994943195
+        }
+    ],
+    [
+        1580994943196,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"task\":\"draw_world\",\"width\":10,\"height\":10}",
+            "ts": 1580994943196
+        }
+    ],
+    [
+        1580994943200,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"y\":0,\"x\":0,\"piece_type\":\"agent\",\"id\":0,\"agent_type\":\"robot\",\"trace_color\":null,\"direction\":\"e\",\"task\":\"draw_piece\"}",
+            "ts": 1580994943200
+        }
+    ],
+    [
+        1580994943201,
+        "TEST",
+        {
+            "type": "run",
+            "event": "stdout",
+            "value": "print test 1\n",
+            "ts": 1580994943201
+        }
+    ],
+    [
+        1580994943202,
+        "TEST",
+        {
+            "type": "run",
+            "event": "stdout",
+            "value": "print test 2\n",
+            "ts": 1580994943202
+        }
+    ],
+    [
+        1580994943205,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"y\":0,\"x\":1,\"piece_type\":\"agent\",\"id\":0,\"agent_type\":\"robot\",\"trace_color\":\"blue\",\"direction\":\"e\",\"task\":\"move_piece\"}",
+            "ts": 1580994943205
+        }
+    ],
+    [
+        1580994943205,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"task\":\"pause\",\"duration\":0.2}",
+            "ts": 1580994943205
+        }
+    ],
+    [
+        1580994943206,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"y\":0,\"x\":2,\"piece_type\":\"agent\",\"id\":0,\"agent_type\":\"robot\",\"trace_color\":\"blue\",\"direction\":\"e\",\"task\":\"move_piece\"}",
+            "ts": 1580994943206
+        }
+    ],
+    [
+        1580994943206,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"task\":\"pause\",\"duration\":0.2}",
+            "ts": 1580994943206
+        }
+    ],
+    [
+        1580994943207,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"y\":0,\"x\":3,\"piece_type\":\"agent\",\"id\":0,\"agent_type\":\"robot\",\"trace_color\":\"blue\",\"direction\":\"e\",\"task\":\"move_piece\"}",
+            "ts": 1580994943207
+        }
+    ],
+    [
+        1580994943207,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"task\":\"pause\",\"duration\":0.2}",
+            "ts": 1580994943207
+        }
+    ],
+    [
+        1580994943208,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"y\":0,\"x\":4,\"piece_type\":\"agent\",\"id\":0,\"agent_type\":\"robot\",\"trace_color\":\"blue\",\"direction\":\"e\",\"task\":\"move_piece\"}",
+            "ts": 1580994943208
+        }
+    ],
+    [
+        1580994943209,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"task\":\"pause\",\"duration\":0.2}",
+            "ts": 1580994943209
+        }
+    ],
+    [
+        1580994943210,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"y\":0,\"x\":5,\"piece_type\":\"agent\",\"id\":0,\"agent_type\":\"robot\",\"trace_color\":\"blue\",\"direction\":\"e\",\"task\":\"move_piece\"}",
+            "ts": 1580994943210
+        }
+    ],
+    [
+        1580994943210,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"task\":\"pause\",\"duration\":0.2}",
+            "ts": 1580994943210
+        }
+    ],
+    [
+        1580994943211,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"y\":0,\"x\":6,\"piece_type\":\"agent\",\"id\":0,\"agent_type\":\"robot\",\"trace_color\":\"blue\",\"direction\":\"e\",\"task\":\"move_piece\"}",
+            "ts": 1580994943211
+        }
+    ],
+    [
+        1580994943211,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"task\":\"pause\",\"duration\":0.2}",
+            "ts": 1580994943211
+        }
+    ],
+    [
+        1580994943212,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"y\":0,\"x\":7,\"piece_type\":\"agent\",\"id\":0,\"agent_type\":\"robot\",\"trace_color\":\"blue\",\"direction\":\"e\",\"task\":\"move_piece\"}",
+            "ts": 1580994943212
+        }
+    ],
+    [
+        1580994943212,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"task\":\"pause\",\"duration\":0.2}",
+            "ts": 1580994943212
+        }
+    ],
+    [
+        1580994943213,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"y\":0,\"x\":8,\"piece_type\":\"agent\",\"id\":0,\"agent_type\":\"robot\",\"trace_color\":\"blue\",\"direction\":\"e\",\"task\":\"move_piece\"}",
+            "ts": 1580994943213
+        }
+    ],
+    [
+        1580994943214,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"task\":\"pause\",\"duration\":0.2}",
+            "ts": 1580994943214
+        }
+    ],
+    [
+        1580994943215,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"y\":0,\"x\":9,\"piece_type\":\"agent\",\"id\":0,\"agent_type\":\"robot\",\"trace_color\":\"blue\",\"direction\":\"e\",\"task\":\"move_piece\"}",
+            "ts": 1580994943215
+        }
+    ],
+    [
+        1580994943215,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"task\":\"pause\",\"duration\":0.2}",
+            "ts": 1580994943215
+        }
+    ],
+    [
+        1580994943217,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"y\":0,\"x\":9,\"piece_type\":\"agent\",\"id\":0,\"agent_type\":\"robot\",\"trace_color\":\"blue\",\"direction\":\"n\",\"task\":\"rotate_piece\"}",
+            "ts": 1580994943217
+        }
+    ],
+    [
+        1580994943217,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"task\":\"pause\",\"duration\":0.2}",
+            "ts": 1580994943217
+        }
+    ],
+    [
+        1580994943218,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"y\":1,\"x\":9,\"piece_type\":\"agent\",\"id\":0,\"agent_type\":\"robot\",\"trace_color\":\"blue\",\"direction\":\"n\",\"task\":\"move_piece\"}",
+            "ts": 1580994943218
+        }
+    ],
+    [
+        1580994943218,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"task\":\"pause\",\"duration\":0.2}",
+            "ts": 1580994943218
+        }
+    ],
+    [
+        1580994943219,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"y\":2,\"x\":9,\"piece_type\":\"agent\",\"id\":0,\"agent_type\":\"robot\",\"trace_color\":\"blue\",\"direction\":\"n\",\"task\":\"move_piece\"}",
+            "ts": 1580994943219
+        }
+    ],
+    [
+        1580994943220,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"task\":\"pause\",\"duration\":0.2}",
+            "ts": 1580994943220
+        }
+    ],
+    [
+        1580994943221,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"y\":3,\"x\":9,\"piece_type\":\"agent\",\"id\":0,\"agent_type\":\"robot\",\"trace_color\":\"blue\",\"direction\":\"n\",\"task\":\"move_piece\"}",
+            "ts": 1580994943221
+        }
+    ],
+    [
+        1580994943221,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"task\":\"pause\",\"duration\":0.2}",
+            "ts": 1580994943221
+        }
+    ],
+    [
+        1580994943224,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"y\":4,\"x\":9,\"piece_type\":\"agent\",\"id\":0,\"agent_type\":\"robot\",\"trace_color\":\"blue\",\"direction\":\"n\",\"task\":\"move_piece\"}",
+            "ts": 1580994943224
+        }
+    ],
+    [
+        1580994943224,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"task\":\"pause\",\"duration\":0.2}",
+            "ts": 1580994943224
+        }
+    ],
+    [
+        1580994943225,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"y\":5,\"x\":9,\"piece_type\":\"agent\",\"id\":0,\"agent_type\":\"robot\",\"trace_color\":\"blue\",\"direction\":\"n\",\"task\":\"move_piece\"}",
+            "ts": 1580994943225
+        }
+    ],
+    [
+        1580994943225,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"task\":\"pause\",\"duration\":0.2}",
+            "ts": 1580994943225
+        }
+    ],
+    [
+        1580994943227,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"y\":6,\"x\":9,\"piece_type\":\"agent\",\"id\":0,\"agent_type\":\"robot\",\"trace_color\":\"blue\",\"direction\":\"n\",\"task\":\"move_piece\"}",
+            "ts": 1580994943227
+        }
+    ],
+    [
+        1580994943227,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"task\":\"pause\",\"duration\":0.2}",
+            "ts": 1580994943227
+        }
+    ],
+    [
+        1580994943228,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"y\":7,\"x\":9,\"piece_type\":\"agent\",\"id\":0,\"agent_type\":\"robot\",\"trace_color\":\"blue\",\"direction\":\"n\",\"task\":\"move_piece\"}",
+            "ts": 1580994943228
+        }
+    ],
+    [
+        1580994943228,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"task\":\"pause\",\"duration\":0.2}",
+            "ts": 1580994943228
+        }
+    ],
+    [
+        1580994943229,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"y\":8,\"x\":9,\"piece_type\":\"agent\",\"id\":0,\"agent_type\":\"robot\",\"trace_color\":\"blue\",\"direction\":\"n\",\"task\":\"move_piece\"}",
+            "ts": 1580994943229
+        }
+    ],
+    [
+        1580994943229,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"task\":\"pause\",\"duration\":0.2}",
+            "ts": 1580994943229
+        }
+    ],
+    [
+        1580994943230,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"y\":9,\"x\":9,\"piece_type\":\"agent\",\"id\":0,\"agent_type\":\"robot\",\"trace_color\":\"blue\",\"direction\":\"n\",\"task\":\"move_piece\"}",
+            "ts": 1580994943230
+        }
+    ],
+    [
+        1580994943231,
+        "TEST",
+        {
+            "type": "run",
+            "event": "robot-draw",
+            "value": "{\"task\":\"pause\",\"duration\":0.2}",
+            "ts": 1580994943231
+        }
+    ],
+    [
+        1580994950104,
+        "TEST",
+        {
+            "type": "edit",
+            "filename": "main.py",
+            "value": "\ncreate_world()\nbot = Robot()\n\n# \"bot\"이 움직이는 경로를 파란색 선으로 표시합니다.\nbot.set_trace('blue')\n\nprint('print test 1')\nprint('print test 2')\n# print('print test 3')\n\n# \"bot\"을 왼쪽으로 돌리고, 앞으로 두 칸 움직이고,\n# 왼쪽으로 세 번 돌리고, 앞으로 세 칸 움직입니다.\nwhile bot.front_is_clear():\n    bot.move()\nbot.turn_left()\nwhile bot.front_is_clear():\n    bot.move()",
+            "line": 9,
+            "ch": 16,
+            "ts": 1580994950104
+        }
+    ],
+    [
+        1580994951108,
+        "TEST",
+        {
+            "type": "edit",
+            "filename": "main.py",
+            "value": "create_world()\nbot = Robot()\n\n# \"bot\"이 움직이는 경로를 파란색 선으로 표시합니다.\nbot.set_trace('blue')\n\nprint('print test 1')\nprint('print test 2')\n# print('print test 3')\n\n# \"bot\"을 왼쪽으로 돌리고, 앞으로 두 칸 움직이고,\n# 왼쪽으로 세 번 돌리고, 앞으로 세 칸 움직입니다.\nwhile bot.front_is_clear():\n    bot.move()\nbot.turn_left()\nwhile bot.front_is_clear():\n    bot.move()\n",
+            "line": 10,
+            "ch": 2,
+            "ts": 1580994951108
+        }
+    ],
+    [
+        1580994952108,
+        "TEST",
+        {
+            "type": "edit",
+            "filename": "main.py",
+            "value": "create_world()\nbot = Robot()\n\n# \"bot\"이 움직이는 경로를 파란색 선으로 표시합니다.\nbot.set_trace('blue')\n\nprint('print test 1')\nprint('print test 2')\nprint('print test 3')\n\n# \"bot\"을 왼쪽으로 돌리고, 앞으로 두 칸 움직이고,\n# 왼쪽으로 세 번 돌리고, 앞으로 세 칸 움직입니다.\nwhile bot.front_is_clear():\n    bot.move()\nbot.turn_left()\nwhile bot.front_is_clear():\n    bot.move()\n",
+            "line": 10,
+            "ch": 0,
+            "ts": 1580994952108
+        }
+    ]
+]

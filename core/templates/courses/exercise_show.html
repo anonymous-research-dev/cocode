@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% load jsonify %}
+{% block script_brython %}
+<script src="{% static 'web/brython.js' %}"></script>
+{% endblock %}
+{% block script_course %}
+<script src="{% static 'web/course.js' %}"></script>
+{% endblock %}
+{% block script_exercise %}
+<script src="{% static 'web/exercise.js' %}"></script>
+{% endblock %}
+{% if course %}
+{% block title %}Cocode: {{ course.name }}{% endblock %}
+{% endif %}
+{% block body %}
+<section class="hero is-primary u-header">
+    <div class="hero-head">
+        {% with is_fullscreen=True %}
+        {% include 'header.html' %}
+        {% endwith %}
+    </div>
+</section>
+<section id="exercise-show" class="u-header-padded">
+    <div class="u-headered-full-screen">
+        <div class="u-flex-h-container">
+            <div class="u-flex-item u-side-menu is-hidden-touch">
+                <chapter-nav :course="course" :init-material-states-map="materialStatesMap" :init-material-accessible-map="materialAccessibleMap" :material="material"></chapter-nav>
+            </div>
+            <div class="u-flex-fill-item">
+                <div class="u-fill">
+                    <exercise :course="course" :material="material" :next-material="nextMaterial" :material-accessible-map="materialAccessibleMap" :exp-mode="expMode" :content="content"></exercise>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    new Vue({
+        el: '#exercise-show',
+        data: {
+            course: {{ course | jsonify | safe }},
+            materialStatesMap: {{ material_states_dict | jsonify | safe }},
+            materialAccessibleMap: {{ material_accessible_dict | jsonify | safe }},
+            material: {{ material | jsonify | safe }},
+            nextMaterial: {{ next_material | jsonify | safe }},
+            expMode: {{ exp_mode | jsonify | safe }},
+            content: {{ content | jsonify | safe }},
+        },
+    });
+</script>
+{% endblock %}

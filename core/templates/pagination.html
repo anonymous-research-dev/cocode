@@ -1,0 +1,37 @@
+{% load i18n %}
+{% if page_contents %}
+<nav class="pagination" role="navigation" aria-label="pagination">
+    {% if page_contents.has_previous %}
+    <a class="pagination-previous" href="?page={{ page_contents.previous_page_number }}">{% trans 'Previous' %}</a>
+    {% else %}
+    <a class="pagination-previous" title="{% trans 'This is the first page' %}" disabled>{% trans 'Previous' %}</a>
+    {% endif %}
+    {% if page_contents.has_next %}
+    <a class="pagination-next" href="?page={{ page_contents.next_page_number }}">{% trans 'Next' %}</a>
+    {% else %}
+    <a class="pagination-next" title="{% trans 'This is the last page' %}" disabled>{% trans 'Next' %}</a>
+    {% endif %}
+    <div class="pagination-list">
+        {% if page_contents.has_previous %}
+        <div>
+            <a class="pagination-link" href="?page={{ page_contents.previous_page_number }}">
+                {{ page_contents.previous_page_number }}
+            </a>
+        </div>
+        {% endif %}
+        <div>
+            <a class="pagination-link is-current" aria-label="{% trans 'Page' %} {{ page_contents.number }}"
+                aria-current="page">
+                {{ page_contents.number }}
+            </a>
+        </div>
+        {% if page_contents.has_next %}
+        <div>
+            <a class="pagination-link" href="?page={{ page_contents.next_page_number }}">
+                {{ page_contents.next_page_number }}
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</nav>
+{% endif %}

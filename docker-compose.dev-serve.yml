@@ -1,0 +1,33 @@
+version: '2'
+services:
+  redis:
+    image: redis
+    entrypoint: redis-server --appendonly yes
+    restart: always
+  app:
+    build: .
+    # command: bash /app/wait-for-it.sh db:5432 -- bash -c "python manage.py migrate && gunicorn --bind unix:/app/sock/cocode.sock --workers 16 cocode.wsgi:application"
+    # command: bash /app/wait-for-it.sh db:5432 -- bash -c "python manage.py migrate && daphne --bind unix:/app/sock/cocode.sock cocode.asgi:application"
+    environment:
+      - DJANGO_SETTINGS_MODULE=cocode.settings
+    # env_file:
+    #   - cert/secrets.env
+    command: bash -c "gunicorn --bind 0.0.0.0:80 cocode.wsgi:application"
+    working_dir: /app
+    depends_on:
+      - redis
+    volumes:
+      - .:/app
+  nginx:
+    image: nginx
+    depends_on:
+      - app
+      # - bundler
+    volumes:
+      - ./nginx.dev-serve.conf:/etc/nginx/conf.d/default.conf
+      - ./static:/app/static
+      # - ./cert:/app/cert
+      - ./log/nginx:/app/log/nginx
+    ports:
+      - 80:80
+      # - 443:443

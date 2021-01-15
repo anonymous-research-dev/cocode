@@ -1,0 +1,15 @@
+
+// Fonts.
+$font-family-sans-serif: 'Nanum Gothic', sans-serif;
+
+// Colors.
+$border-color: #aaaaaa;
+
+// Media Mixins
+@mixin for-touch-only {
+    @media (max-width: 1023px) { @content; }
+}
+
+@mixin for-desktop-only {
+    @media (min-width: 1024px) { @content; }
+}

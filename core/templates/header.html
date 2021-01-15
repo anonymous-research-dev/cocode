@@ -1,0 +1,47 @@
+{% load i18n %}
+{% load static %}
+<nav class="main-nav navbar">
+    {% if is_fullscreen %}
+    <div class="container u-fill-header-container">
+    {% else %}
+    <div class="container">
+    {% endif %}
+        <div class="navbar-start">
+            <a class="navbar-item" href="/">
+                <h1 class="title is-5">Cocode</h1>
+            </a>
+            <a class="navbar-item" href="/courses">
+                {% trans '과목' %}
+            </a>
+        </div>
+        <span class="navbar-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+        <div class="navbar-end navbar-menu">
+            {% if user.is_authenticated %}
+            {% if user.is_restricted %}
+            <a class="navbar-item" href="{% url 'logout' %}">
+                {% trans '실험 참가 종료' %}
+            </a>
+            {% else %}
+            <a class="navbar-item" href="{% url 'edit_profile' %}">
+                {{ user.first_name }}
+            </a>
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button" href="{% url 'logout' %}">
+                        {% trans '로그아웃' %}
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+            {% else %}
+            <a class="navbar-item" href="{% url 'login' %}">
+                {% trans '로그인' %}
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</nav>

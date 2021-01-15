@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% load jsonify %}
+{% if course %}
+{% block title %}Cocode: {{ course.name }}{% endblock %}
+{% endif %}
+{% block script_course %}
+<script src="{% static 'web/course.js' %}"></script>
+{% endblock %}
+{% block header_content %}
+{% endblock %}
+{% block fill_content %}
+<section class="hero is-primary">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                {{ course.name }}
+            </h1>
+            <h2 class="subtitle">
+                Cocode Team
+            </h2>
+        </div>
+    </div>
+</section>
+<div class="u-narrow-container">
+    <div class="u-content-padded">
+        <course id="course-show" :course="course" :init-material-states-map="materialStatesMap" :init-material-accessible-map="materialAccessibleMap"></course>
+    </div>
+</div>
+<script>
+    new Vue({
+        el: '#course-show',
+        data: {
+            course: {{ course | jsonify | safe }},
+            materialStatesMap: {{ material_states_dict | jsonify | safe }},
+            materialAccessibleMap: {{ material_accessible_dict | jsonify | safe }},
+        },
+    });
+</script>
+{% endblock %}

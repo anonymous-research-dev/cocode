@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+<div class="container">
+    <div class="tile is-parent is-vertical">
+        <div class="tile is-child">
+            <h1 class="title">
+                {% trans 'Sign up' %}
+            </h1>
+        </div>
+        <div class="tile is-child">
+            <form class="styled-form" method="post">
+                {% csrf_token %}
+                {% include 'form.html' %}
+                <div class="field is-grouped">
+                    <div class="control">
+                        <input class="button is-primary" type="submit" value="{% trans 'Sign up' %}">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

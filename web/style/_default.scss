@@ -1,0 +1,64 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato|Nanum+Gothic');
+
+* {
+    box-sizing: border-box;
+
+    $base-color: #999999;
+    $arrow-color: #999999;
+    $track-color: #eeeeee;
+    scrollbar-base-color: $base-color;
+    scrollbar-face-color: $base-color;
+    scrollbar-3dlight-color: $base-color;
+    scrollbar-highlight-color: $base-color;
+    scrollbar-track-color: $track-color;
+    scrollbar-arrow-color: $arrow-color;
+    scrollbar-shadow-color: $base-color;
+    scrollbar-dark-shadow-color: $base-color;
+
+    ::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: $track-color;
+    }
+
+    ::-webkit-scrollbar-track-piece {
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        background-color: $base-color;
+    }
+
+    ::-webkit-scrollbar-corner {
+        background-color: $track-color;
+    }
+
+    ::-webkit-resizer {
+        background-color: $track-color;
+    }
+}
+
+html {
+    font-family: $font-family-sans-serif;
+}
+
+.content {
+    em {
+        font-style: oblique;
+    }
+}
+
+.radio {
+    font-size: 0.8rem;
+
+    input {
+        margin-right: 0.2rem;
+    }
+}
+    

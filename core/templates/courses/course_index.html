@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% load jsonify %}
+{% block fill_content %}
+<section class="hero is-primary">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                {% trans '과목' %}
+            </h1>
+            <h2 class="subtitle">
+                {% trans '수강할 수 있는 과목 목록입니다.' %}
+            </h2>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="u-content-padded">
+        <index id="course-index" :index="index"></index>
+    </div>
+</div>
+<script>
+    new Vue({
+        el: '#course-index',
+        data: {
+            index: {{ course_index | jsonify | safe }},
+        },
+    });
+</script>
+{% endblock %}

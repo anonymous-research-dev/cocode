@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+<div class="content">
+    <h1 class="u-v-padded">
+        {% trans 'Manage account' %}
+    </h1>
+    {% if user.is_restricted %}
+    <p>
+        {% trans 'Your account is in restricted mode. Please contact admin if you want to modify your account settings.' %}
+    </p>
+    {% else %}
+    <h2 class="u-v-small-padded">
+        {% trans 'Change password' %}
+    </h2>
+    <p>
+        {% trans 'Press the button below to change the password.' %}
+    </p>
+    <div class="field is-grouped">
+        <div class="control">
+            <a class="button is-primary" href="{% url 'password_change' %}">
+                {% trans 'Change password' %}
+            </a>
+        </div>
+    </div>
+    <h2 class="u-v-small-padded">
+        {% trans 'Edit profile' %}
+    </h2>
+    <form class="styled-form" method="post">
+        {% csrf_token %}
+        {% include 'form.html' %}
+        <div class="field is-grouped">
+            <div class="control">
+                <input class="button is-primary" type="submit" value="{% trans 'Submit' %}">
+            </div>
+        </div>
+    </form>
+    {% endif %}
+</div>
+{% endblock %}

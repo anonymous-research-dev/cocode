@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% load jsonify %}
+{% block content %}
+<div class="container">
+    <div class="content u-v-padded u-content-with-img">
+        <vue-markdown id="markdown-document" v-bind:source="content" v-bind:breaks="false"></vue-markdown>
+    </div>
+</div>
+<script>
+    function initVue(source) {
+        new Vue({
+            el: '#markdown-document',
+            data: {
+                content: source,
+            },
+        });
+    }
+    function loadMarkdown(paths) {
+        if (paths.length > 0) {
+            return axios.get(paths[0])
+                .then(function (response) {
+                    return response.data;
+                })
+                .catch(function (error) {
+                    return loadMarkdown(paths.slice(1));
+                });
+        } else {
+            return Promise.reject('{% trans "Requested document is not found." %}');
+        }
+    }
+    loadMarkdown([
+        '{% static local_document_path %}',
+        '{% static document_path %}',
+    ])
+        .then(function (data) {
+            initVue(data);
+        });
+</script>
+{% endblock %}

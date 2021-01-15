@@ -1,0 +1,169 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-27 21:21+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: vue-gettexts.js:3 web/components/exercise.vue:72
+msgid "다음"
+msgstr "Next"
+
+#: vue-gettexts.js:4 web/components/chapter-nav.vue:7
+msgid "돌아가기"
+msgstr "Previous"
+
+#: vue-gettexts.js:5
+msgid "다음 장으로 이동"
+msgstr "Next Chapter"
+
+#: vue-gettexts.js:6 web/components/exercise.vue:51
+msgid "실행"
+msgstr "Run"
+
+#: vue-gettexts.js:7
+msgid "코드 초기화"
+msgstr "Reset Code"
+
+#: vue-gettexts.js:8
+msgid "확인"
+msgstr "OK"
+
+#: vue-gettexts.js:9 web/components/dialog-modal.vue:18
+#: web/components/dialog-modal.vue:26
+msgid "취소"
+msgstr "Cancel"
+
+#: vue-gettexts.js:10 web/components/dialog-modal.vue:21
+msgid "네"
+msgstr "Yes"
+
+#: vue-gettexts.js:11
+msgid "아니오"
+msgstr "No"
+
+#: vue-gettexts.js:12
+msgid "다시 시도"
+msgstr "Retry"
+
+#: vue-gettexts.js:13 web/components/dialog-modal.vue:48
+msgid "알림"
+msgstr "Alert"
+
+#: vue-gettexts.js:14 web/components/exercise.vue:42
+msgid "저장"
+msgstr "Save"
+
+#: vue-gettexts.js:15 web/components/exercise.vue:61
+msgid "제출"
+msgstr "Submit"
+
+#: vue-gettexts.js:16
+msgid "동료 화면 끄기"
+msgstr "Hide Screens"
+
+#: vue-gettexts.js:17
+msgid "동료 화면 켜기"
+msgstr "Show Screens"
+
+#: vue-gettexts.js:18
+msgid "코드 리셋"
+msgstr "Reset Code"
+
+#: vue-gettexts.js:19 web/components/exercise.vue:253
+msgid ""
+"이번 문제를 푸는 동안에 화면 오른쪽에 다른 학생들이 문제 푸는 모습이 보이도"
+"록 할까요?"
+msgstr ""
+"Do you want to see co-learner screens for this exercise?"
+
+#: vue-gettexts.js:20 web/components/exercise.vue:286
+msgid "코드를 리셋할까요? 수정하신 부분이 모두 사라집니다."
+msgstr "Reset code? All of your modifications will be gone."
+
+#: vue-gettexts.js:21 web/components/exercise.vue:308
+msgid ""
+"일정 시간동안 사용하지 않아서 접속이 종료되었습니다. 확인 버튼을 누르시면 서"
+"버와 다시 연결됩니다."
+msgstr ""
+"Connection has been terminated since you have been idle for a while. "
+"Press OK button to reconnect."
+
+#: vue-gettexts.js:22
+msgid "채점"
+msgstr "Grade"
+
+#: vue-gettexts.js:23 web/components/exercise/exercise-grader.vue:7
+#: web/components/exercise/exercise-snaps.vue:251
+msgid "채점 중..."
+msgstr "Grading..."
+
+#: vue-gettexts.js:24
+msgid "성공!"
+msgstr "Success!"
+
+#: vue-gettexts.js:25 web/components/exercise/exercise-grader.vue:13
+msgid "다시 시도해보세요."
+msgstr "Please retry."
+
+#: vue-gettexts.js:26 web/components/exercise/exercise-snaps.vue:38
+#: web/components/exercise/exercise-snaps.vue:81
+msgid "익명"
+msgstr "Anonymous"
+
+#: vue-gettexts.js:27 web/components/exercise/exercise-snaps.vue:214
+msgid "수정 중..."
+msgstr "Editing..."
+
+#: vue-gettexts.js:28 web/components/exercise/exercise-snaps.vue:244
+msgid "실행 중..."
+msgstr "Running..."
+
+#: vue-gettexts.js:29 web/components/exercise/exercise-snaps.vue:266
+msgid "채점 완료: 통과"
+msgstr "Grading Done: Passed"
+
+#: vue-gettexts.js:30 web/components/exercise/exercise-snaps.vue:266
+msgid "채점 완료: 통과 실패"
+msgstr "Grading Done: Failed"
+
+#: vue-gettexts.js:31 web/components/index.vue:5
+msgid "모든 과목"
+msgstr "All Courses"
+
+#: vue-gettexts.js:32 web/components/survey.vue:68
+msgid "매우 그렇지 않다"
+msgstr "Strongly Disagree"
+
+#: vue-gettexts.js:33
+msgid "그렇지 않다"
+msgstr "Disagree"
+
+#: vue-gettexts.js:34 web/components/survey.vue:76
+msgid "보통이다"
+msgstr "Neutral"
+
+#: vue-gettexts.js:35
+msgid "그렇다"
+msgstr "Agree"
+
+#: vue-gettexts.js:36 web/components/survey.vue:84
+msgid "매우 그렇다"
+msgstr "Strongly Agree"
+
+#: vue-gettexts.js:37
+msgid "모든 필수 질문에 답을 입력해주세요."
+msgstr "Please answer to all required questions."

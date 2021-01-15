@@ -1,0 +1,49 @@
+{% load i18n %}
+{% load static %}
+
+<!doctype html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Cocode{% endblock %}</title>
+    <meta name="description" content="{% trans 'Web-based programming education platform.' %}'">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="{% url 'javascript_catalog' %}"></script>
+    <script src="{% static 'web/polyfill.js' %}"></script>
+    <script src="{% static 'web/main.js' %}"></script>
+    <script>
+        window.setCsrfToken('{{ csrf_token }}');
+        window.setStaticUrl('{% static "" %}');
+    </script>
+    {% block script_brython %}{% endblock %}
+    {% block script_course %}{% endblock %}
+    {% block script_exercise %}{% endblock %}
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+    {% include 'dialog.html' %}
+    {% block body %}
+    <section class="hero is-primary u-header">
+        <div class="hero-head">
+            {% include 'header.html' %}
+        </div>
+        {% block header_content %}{% endblock %}
+    </section>
+    <section id="content-wrapper" class="u-header-padded">
+        {% block fill_content %}
+        <div class="container">
+            <div class="u-content-padded">
+                {% block tabs %}{% endblock %}
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+        {% endblock %}
+    </section>
+    {% endblock %}
+</body>
+
+</html>

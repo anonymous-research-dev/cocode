@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+<div class="content">
+    <div class="columns is-centered">
+        <div class="column is-half">
+            {% if form.errors %}
+            <div class="notification is-danger">
+                {% trans "Your username and password didn't match. Please try again." %}
+            </div>
+            {% endif %}
+            {% if next %}
+            {% if user.is_authenticated %}
+            <div class="notification is-danger">
+                {% trans "Your account doesn't have access to this page. To proceed, please login with an account that has access." %}
+            </div>
+            {% else %}
+            <div class="notification">
+                {% trans 'Please login to see this page.' %}
+            </div>
+            {% endif %}
+            {% endif %}
+            <div class="box">
+                <h1 class="title">
+                    {% trans 'Log in' %}
+                </h1>
+                <form method="post" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    {% with field=form.username %}
+                    <div class="field">
+                        <label class="label" for="{{ field.id_for_label }}">
+                            {{ field.label }}
+                        </label>
+                        <div class="control">
+                            <input class="input" type="text" name="{{ field.html_name }}"
+                                value="{{ field.value|default:'' }}"></input>
+                        </div>
+                    </div>
+                    {% endwith %}
+                    {% with field=form.password %}
+                    <div class="field">
+                        <label class="label" for="{{ field.id_for_label }}">
+                            {{ field.label }}
+                        </label>
+                        <div class="control">
+                            <input class="input" type="password" name="{{ field.html_name }}"
+                                value="{{ field.value|default:'' }}"></input>
+                        </div>
+                    </div>
+                    {% endwith %}
+                    <input type="hidden" name="next" value="{{ next }}">
+                    <div class="u-v-small-padded">
+                        <a href="{% url 'password_reset' %}">
+                            {% trans 'Forgot password?' %}
+                        </a>
+                    </div>
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <input class="button is-primary" type="submit" value="{% trans 'Log in' %}">
+                        </div>
+                    </div>
+                </form>
+                <div class="u-v-padded">
+                    {% trans 'or' %}
+                </div>
+                <div class="buttons">
+                    <a class="button is-primary" href="{% url 'social:begin' 'google-oauth2' %}">
+                        <span class="icon">
+                            <i class="fa fa-google"></i>
+                        </span>
+                        <span>{% trans 'Log in with Google' %}</span>
+                    </a>
+                </div>
+            </div>
+            <div class="u-v-small-padded">
+                <p>
+                    {% trans "Don't have an account?" %}
+                </p>
+                <div class="buttons">
+                    <a class="button" href="{% url 'signup_agreements' %}">
+                        {% trans 'Sign up' %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

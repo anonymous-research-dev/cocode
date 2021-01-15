@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+<div class="container">
+    <div class="tile is-parent is-vertical">
+        <div class="tile is-child">
+            <h1 class="title">
+                {% trans 'Sign up' %}
+            </h1>
+        </div>
+        <div class="tile is-child">
+            <div class="content">
+                <p>
+                    <strong>
+                        {% trans 'Please agree to the following terms of service.' %}
+                    </strong>
+                </p>
+                <hr />
+                <p>
+                    <h5>{% trans 'Cocode Terms and Conditions' %} ({% trans 'Required' %})</h5>
+                    {% trans 'You have to agree to our terms and conditions to use Cocode service.' %}<br />
+                    <a href="{% url 'document_show' 'terms_of_service.md' %}" target="_blank">{% trans 'See the document' %}</a>
+                </p>
+                <p>
+                    <h5>{% trans 'Research Agreement' %} ({% trans 'Required' %})</h5>
+                    {% trans 'Cocode is developed for a research project to improve the web-based computer science education.' %}<br />
+                    {% trans 'You have to accept this agreement to use Cocode service.' %}<br />
+                    <a href="{% url 'document_show' 'research_agreement.md' %}" target="_blank">{% trans 'See the document' %}</a>
+                </p>
+                <hr />
+                <p>
+                    {% trans 'By clicking Agree, you agree to all of our terms stated above.' %}
+                </p>
+                <p>
+                    <a class="button is-primary" href="{% url 'signup' %}">
+                        {% trans 'Agree' %}
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

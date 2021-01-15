@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+<div class="container">
+    <div class="tile is-parent is-vertical">
+        <div class="tile is-child">
+            <h1 class="title">
+                {% trans 'Confirm delete' %}
+            </h1>
+        </div>
+        <div class="tile is-child">
+            <p>
+                {% trans 'Are you sure you want to delete this:' %}
+                &nbsp;
+                "{{ object }}"?
+            </p>
+        </div>
+        <div>
+            <form class="styled-form" method="post">
+                {% csrf_token %}
+                <div class="field is-grouped">
+                    <div class="control">
+                        <input class="button is-primary" type="submit" value="{% trans 'Delete' %}">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
